@@ -27,14 +27,17 @@
 						<input class="form-control" ng-model="serviceClient.name"/> <!--input field-->
 					</td>
 					<td>
-						<button class="btn btn-primary" ng-click="create()">Search</button>
+						<button class="btn btn-primary" ng-click="create()">Add</button>
 					</td>
 				</tr>
 			</thead>
 			<tbody>
 				<tr ng-repeat="serviceClient in serviceClients">
 					<td>
-						{{serviceClient}}
+						{{serviceClient.name}}
+					</td>
+					<td>
+						<button ng-click="remove(serviceClient._id)" class="btn btn-danger">Remove</button>
 					</td>
 			</tbody>
 		</table>
